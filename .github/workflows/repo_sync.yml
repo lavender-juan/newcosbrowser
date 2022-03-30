@@ -11,4 +11,4 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.GITEE_PRIVATE_KEY }}
         with:
           source-repo: "https://github.com/lavender-juan/newcosbrowser.git"
-          destination-repo: "git@gitee.com:juan-lavender/newcosbrowser.git"
+          destination-repo: "git@gitee.com:juan-lavender/testcosbrowser.git"
