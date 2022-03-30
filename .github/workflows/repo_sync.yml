@@ -9,6 +9,11 @@ jobs:
       - uses: wearerequired/git-mirror-action@master
         env:
           SSH_PRIVATE_KEY: ${{ secrets.GITEE_PRIVATE_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          echo "StrictHostKeyChecking no" >> ~/.ssh/config
         with:
           source-repo: "https://github.com/lavender-juan/newcosbrowser.git"
           destination-repo: "git@gitee.com:juan-lavender/newcosbrowser.git"
