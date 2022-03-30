@@ -17,7 +17,7 @@ jobs:
       - name: Push Mirror
         env:
           SOURCE_REPO: 'https://github.com/lavender-juan/newcosbrowser.git'
-          DESTINATION_REPO: 'git@gitee.com:juan-lavender/newcosbrowser.git'
+          DESTINATION_REPO: 'https://gitee.com/juan-lavender/newcosbrowser.git'
         run: |
           git clone --mirror "$SOURCE_REPO" && cd `basename "$SOURCE_REPO"`
           git remote set-url --push origin "$DESTINATION_REPO"
